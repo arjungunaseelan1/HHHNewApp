@@ -1,0 +1,87 @@
+/* Container */
+.booking-details-container {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* Title */
+.booking-title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #446152;
+    display: inline-block;
+}
+
+/* Date row */
+.date-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.checkin-btn {
+    background: #6ee16e;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    background: #ff0d0d;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Info box */
+.info-box {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Counters */
+.counter-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Each group */
+
+/* Counter UI */
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter span {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+/* Buttons */
+.counter button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,25 @@
+.top-banner {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    padding: 20px 24px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: var(--glass-shadow);
+}
+
+.top-banner h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+}
+
+.top-banner p {
+    margin: 5px 0 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-light);
+}

@@ -1,0 +1,70 @@
+.activity-container {
+    padding: 20px;
+}
+
+.activity-layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left grid */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    flex: 3;
+}
+
+/* Cards */
+.activity-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.counter button {
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Right summary */
+.summary-box {
+    flex: 1;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--jacaranda-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Image */
+.activity-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

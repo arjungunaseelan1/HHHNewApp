@@ -1,0 +1,65 @@
+/* Container */
+.calendar-box {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 20px;
+    border-radius: 20px;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.calendar-header button {
+    border: none;
+    background: var(--jacaranda-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(156,137,184,0.4);
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Month text */
+.calendar-header span {
+    font-weight: 500;
+}
+
+/* Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+/* Day names */
+.day-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Days */
+.calendar-day {
+    background: rgba(255,255,255,0.4);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover */
+.calendar-day:hover {
+    background: var(--jacaranda-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(156,137,184,0.4);
+}

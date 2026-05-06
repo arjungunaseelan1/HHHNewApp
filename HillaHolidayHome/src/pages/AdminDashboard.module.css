@@ -1,0 +1,104 @@
+/* Container */
+.dashboard-container {
+    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    font-weight: 500;
+}
+
+.icons {
+    font-size: 20px;
+}
+
+/* Stats */
+.stats-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.stat-card p {
+    margin-top: 10px;
+}
+
+/* Charts */
+.charts-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* .chart-box {
+    flex: 2;
+    height: 200px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Calendar */
+/* .calendar-box {
+    margin-top: 20px;
+    width: 300px;
+    height: 250px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Bottom section */
+.bottom-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: flex-start; /* 👈 IMPORTANT */
+}
+
+/* Chart should take more space */
+.chart-box {
+    flex: 2;
+}
+
+/* Calendar stays compact */
+.calendar-box {
+    flex: 1;
+    max-width: 300px;
+}

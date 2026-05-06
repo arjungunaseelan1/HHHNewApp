@@ -1,0 +1,66 @@
+/* Outer container */
+.booking-container {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Title */
+.booking-container h2 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #222;
+}
+
+/* Grid layout */
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Full width fields */
+.full-width {
+    grid-column: span 3;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+/* Labels */
+
+/* Inputs */
+
+/* Focus effect */
+
+/* Header row */
+.booking-header {
+    display: flex;
+    justify-content: space-between; /* 👈 pushes button to right */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Optional: clean button style */
+.edit-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--jacaranda-gradient);
+    color: white;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background: var(--jacaranda-gradient);
+}

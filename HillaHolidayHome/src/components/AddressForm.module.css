@@ -1,0 +1,56 @@
+/* Container */
+.address-container {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* Title */
+.address-container h2 {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Grid */
+.address-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Full width */
+.full-width {
+    grid-column: span 3;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+
+/* File Upload */
+.file-upload {
+    position: relative;
+}
+
+/* Hide default input */
+.file-upload input[type="file"] {
+    display: none;
+}
+
+/* Custom upload button */
+
+/* Hover */
+.upload-label:hover {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}

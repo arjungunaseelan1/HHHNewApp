@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --glass-blur: blur(16px);
+    
+    --jacaranda-gradient: linear-gradient(135deg, #8ba4d5, #9c89b8);
+    --jacaranda-hover: linear-gradient(135deg, #7a94cc, #8d79ad);
+    
+    --text-dark: #1e293b;
+    --text-light: #475569;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yatra One', system-ui;
+    min-height: 100vh;
+    background-image: url('./assets/jacaranda_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #e2e8f0;
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6, p, label, a, span, button {
+    font-family: 'Yatra One', system-ui;
+}
+
+label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    font-size: 14px;
+    display: block;
+}
+
+/* Glassy inputs universally */
+input:not([type="radio"]):not([type="checkbox"]), 
+textarea, 
+select {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+input:not([type="radio"]):not([type="checkbox"]):focus, 
+textarea:focus, 
+select:focus {
+    outline: none;
+    border-color: #9c89b8;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(156, 137, 184, 0.3);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #64748b;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.2); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.4); }
