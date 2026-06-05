@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ActivityForm.module.css";
 
-function ActivityForm() {
+function ActivityForm({ formData = {}, onChange }) {
     return (
         <div className={styles['activity-form-container']} >
             <h2>Booking Information</h2>
@@ -11,13 +11,13 @@ function ActivityForm() {
                 {/* Guest Name */}
                 <div className={styles['form-group']} >
                     <label>Guest Name</label>
-                    <input type="text" placeholder="Guest Name/Full Name" />
+                    <input type="text" name="guestName" value={formData.guestName || ""} onChange={onChange} placeholder="Guest Name/Full Name" />
                 </div>
 
                 {/* Phone */}
                 <div className={styles['form-group']} >
                     <label>Phone Number</label>
-                    <input type="text" placeholder="Phone Number" />
+                    <input type="text" name="phone" value={formData.phone || ""} onChange={onChange} placeholder="Phone Number" />
                 </div>
 
                 {/* Date */}

@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../pages/ActivityPage.module.css";
 
 function BookingSummary({ activities }) {
+    const navigate = useNavigate();
     const total = activities.reduce(
         (sum, item) => sum + item.price * item.count,
         0
@@ -11,7 +13,7 @@ function BookingSummary({ activities }) {
 
     return (
         <div className={styles['summary-box']} >
-            <h3>🛒 Booking Summary</h3>
+            <h3>🛒 Activities Summary</h3>
 
             {activities.map(
                 (item, i) =>
@@ -27,7 +29,7 @@ function BookingSummary({ activities }) {
             <p>GST: ₹{gst}</p>
             <h4>Total Amount ₹{total + gst}</h4>
 
-            <button className={styles['confirm-btn']} >Confirm Booking</button>
+            <button className={styles['confirm-btn']} onClick={() => navigate('/final-summary', { state: { activities } })}>Complete Booking</button>
         </div>
     );
 }

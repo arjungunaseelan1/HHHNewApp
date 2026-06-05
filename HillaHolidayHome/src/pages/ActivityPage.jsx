@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ActivityPage.module.css";
 import ActivityCard from "../components/ActivityCard";
 import BookingSummary from "../components/BookingSummary";
@@ -49,10 +49,51 @@ function ActivityPage() {
         setActivities(updated);
     };
 
+    const [formData, setFormData] = useState({
+        guestName: "",
+        phone: ""
+    });
+
+    useEffect(() => {
+        const fetchCustomerData = async () => {
+            try {
+                const response = await fetch("http://localhost:5000/api/customers");
+                if (response.ok) {
+                    const data = await response.json();
+                    const latestCustomer = (Array.isArray(data) && data.length > 0)
+                        ? data[data.length - 1]
+                        : data;
+
+                    const firstName = latestCustomer.firstName || latestCustomer.FirstName || "";
+                    const lastName = latestCustomer.lastName || latestCustomer.LastName || "";
+                    const phone = latestCustomer.phone || latestCustomer.PhoneNumber || latestCustomer.Phone || "";
+                    
+                    setFormData(prev => ({
+                        ...prev,
+                        guestName: `${firstName} ${lastName}`.trim(),
+                        phone: phone
+                    }));
+                }
+            } catch (error) {
+                console.error("Error fetching customer data:", error);
+            }
+        };
+
+        fetchCustomerData();
+    }, []);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
     return (
         <div className={styles['activity-container']} >
             {/* <h2>Booking Information</h2> */}
-             <ActivityForm />
+             <ActivityForm formData={formData} onChange={handleChange} />
 
             <div className={styles['activity-layout']} >
                 

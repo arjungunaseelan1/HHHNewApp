@@ -7,6 +7,9 @@ import BookingPage from "./pages/BookingPage";
 import ProfilePage from "./pages/ProfilePage";
 import ActivityPage from "./pages/ActivityPage";
 import AdminDashboard from "./pages/AdminDashboard";
+import NotificationsPage from "./pages/NotificationsPage";
+import FinalSummaryPage from "./pages/FinalSummaryPage";
+import PaymentPage from "./pages/PaymentPage";
 import { BookingProvider } from "./context/BookingContext";
 
 function App() {
@@ -20,10 +23,13 @@ function App() {
                     {/* Sidebar applied globally */}
                     <Route element={<Layout />}>
                         <Route path="/AdminDashboard" element={<AdminDashboard/>} />
+                        <Route path="/notifications" element={<NotificationsPage />} />
                         <Route path="/home" element={<HomePage />} />
                         <Route path="/Booking" element={<BookingPage />} />
                         <Route path="/profile" element={<ProfilePage />} />
                         <Route path="/Activities" element={<ActivityPage />} />
+                        <Route path="/final-summary" element={<FinalSummaryPage />} />
+                        <Route path="/payment" element={<PaymentPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

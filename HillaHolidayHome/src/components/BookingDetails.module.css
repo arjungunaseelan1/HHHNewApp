@@ -11,7 +11,7 @@
 
 /* Title */
 .booking-title {
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 15px;
     border-bottom: 2px solid #446152;
     display: inline-block;

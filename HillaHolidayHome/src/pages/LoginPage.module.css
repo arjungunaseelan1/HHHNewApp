@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
-
 /* Center container with background */
 .login-container {
     min-height: 100vh;
@@ -9,7 +7,6 @@
     background-image: url('./assets/marayur_homestay.png');
     background-size: cover;
     background-position: center;
-    font-family: 'Outfit', sans-serif;
     position: absolute;
     top: 0;
     left: 0;
@@ -35,18 +32,51 @@
     z-index: 2;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
-    border: var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: var(--glass-blur);
     padding: 40px;
     border-radius: 20px;
     width: 350px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--glass-shadow);
+    border: var(--glass-border);
     text-align: center;
-    color: white;
+    color: var(--text-dark);
     animation: fadeIn 0.8s ease-out;
+}
+
+/* Tabs */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    color: var(--text-dark);
+}
+
+.active-tab {
+    background: white;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 /* Header */
@@ -60,8 +90,8 @@
 .login-header p {
     margin: 0 0 30px 0;
     font-size: 14px;
-    font-weight: 300;
-    opacity: 0.8;
+    font-weight: 400;
+    color: var(--text-light);
 }
 
 /* Inputs */
@@ -73,12 +103,9 @@
     width: 100%;
     padding: 12px 15px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    color: white;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: var(--text-dark);
     font-size: 15px;
     font-family: inherit;
     box-sizing: border-box;
@@ -86,18 +113,15 @@
 }
 
 .login-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: #64748b;
 }
 
 /* Input focus */
 .login-input:focus {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.8);
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    border-color: #9c89b8;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(156, 137, 184, 0.3);
 }
 
 /* Button */
@@ -106,29 +130,27 @@
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    color: #2a2a2a;
+    background: var(--jacaranda-gradient);
+    color: white;
     font-size: 16px;
     font-weight: 600;
     font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(156, 137, 184, 0.4);
 }
 
 /* Hover & Active */
 .login-button:hover {
-    background: #f0f0f0;
+    background: var(--jacaranda-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(156, 137, 184, 0.6);
 }
 
 .login-button:active {
     transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(156, 137, 184, 0.4);
 }
 
 /* Animation */

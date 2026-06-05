@@ -9,6 +9,7 @@ function SideBar() {
 
             <ul>
                 <li><NavLink to="/AdminDashboard" className={({isActive}) => isActive ? `${styles['nav-link']} ${styles['active']}` : styles['nav-link']} >Admin Dashboard</NavLink></li>
+                <li><NavLink to="/notifications" className={({isActive}) => isActive ? `${styles['nav-link']} ${styles['active']}` : styles['nav-link']} >Notifications</NavLink></li>
                 <li><NavLink to="/home" className={({isActive}) => isActive ? `${styles['nav-link']} ${styles['active']}` : styles['nav-link']} >Home</NavLink></li>
                 <li><NavLink to="/profile" className={({isActive}) => isActive ? `${styles['nav-link']} ${styles['active']}` : styles['nav-link']} >Customer Profiles</NavLink>  </li>
                 <li><NavLink to="/Booking" className={({isActive}) => isActive ? `${styles['nav-link']} ${styles['active']}` : styles['nav-link']} >Bookings</NavLink>  </li>

@@ -43,13 +43,13 @@ export default function HomePage() {
         }
     };
     //for Booking page navigation
-      const navigate = useNavigate();
-        const handleBooking = () => {
+    const navigate = useNavigate();
+    const handleBooking = () => {
         if (!startDate || !endDate) {
             alert("Please select a check-in and check-out date first!");
             return;
         }
-        navigate("/profile"); // go to profile
+        navigate("/Booking"); // go to Booking page
     };
 
 
@@ -82,16 +82,16 @@ export default function HomePage() {
         <div className={styles['home-page']} >
 
             {/* Property */}
-          <div className={styles['property-card']} >
-            <img src={propertyInfo.image} alt="property" />
-            <div>
-                <h2>{propertyInfo.name}</h2>
-                <p>{propertyInfo.currency}{propertyInfo.price.toLocaleString("en-IN")} / night</p>
+            <div className={styles['property-card']} >
+                <img src={propertyInfo.image} alt="property" />
+                <div>
+                    <h2>{propertyInfo.name}</h2>
+                    <p>{propertyInfo.currency}{propertyInfo.price.toLocaleString("en-IN")} / night</p>
 
-                {/* ✅ Add this button */}
-                <button className={styles['book-btn']}  onClick={handleBooking}>Book Now</button>
+                    {/* ✅ Add this button */}
+                    <button className={styles['book-btn']} onClick={handleBooking}>Book Now</button>
+                </div>
             </div>
-        </div>
 
             {/* Calendar */}
             <div className={styles['calendar-container']} >
@@ -107,7 +107,7 @@ export default function HomePage() {
                 </div>
 
                 <div className={styles['calendar-grid']} >
-                    {["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map((d) => (
+                    {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => (
                         <div key={d} className={styles['day-name']} >{d}</div>
                     ))}
 

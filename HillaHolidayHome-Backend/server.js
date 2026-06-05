@@ -12,6 +12,10 @@ const bookingRoutes = require("./routes/bookingRoutes");
 const loginRoutes = require("./routes/loginRoutes");
 const customerRoutes = require("./routes/customerRoutes");
 
+const bookingSummaryRoutes = require("./routes/bookingSummaryRoutes");
+
+app.use("/api/bookingSummary", bookingSummaryRoutes);
+
 app.use("/api/bookings", bookingRoutes);
 app.use("/api", loginRoutes);
 app.use("/api/customers", customerRoutes);

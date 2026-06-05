@@ -17,6 +17,7 @@ export function BookingProvider({ children }) {
     });
     
     const [guests, setGuests] = useState(1);
+    const [currentCustomerId, setCurrentCustomerId] = useState(null);
     
     const getDaysDifference = () => {
         if (!bookingDates.start || !bookingDates.end) return 0;
@@ -34,6 +35,7 @@ export function BookingProvider({ children }) {
             propertyInfo, 
             bookingDates, setBookingDates,
             guests, setGuests,
+            currentCustomerId, setCurrentCustomerId,
             totalDays: getDaysDifference(),
             totalPrice: getTotalPrice()
         }}>
