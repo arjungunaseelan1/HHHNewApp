@@ -29,7 +29,7 @@ function PaymentPage() {
         };
 
         try {
-            const response = await fetch("http://localhost:5000/api/bookingSummary/insertBookingSummary", {
+            const response = await fetch("https://hhhnewapp-1.onrender.com/api/bookingSummary/insertBookingSummary", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

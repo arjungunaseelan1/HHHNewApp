@@ -28,8 +28,8 @@ function LoginPage() {
             : { Email, user_name, password };
 
         try {
-            // Replace the URL 'http://localhost:8080' with your actual backend domain/port
-            const response = await fetch(`http://localhost:5000${endpoint}`, {
+            // Replace the URL 'https://hhhnewapp-1.onrender.com' with your actual backend domain/port
+            const response = await fetch(`https://hhhnewapp-1.onrender.com${endpoint}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

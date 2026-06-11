@@ -29,7 +29,7 @@ export default function Booking() {
       try {
         // NOTE: Replace the endpoint with your actual endpoint to get current customer
         // Currently fetching all data from db that matches Admin.Customers fields
-        const response = await fetch("http://localhost:5000/api/customers");
+        const response = await fetch("https://hhhnewapp-1.onrender.com/api/customers");
         if (response.ok) {
           const data = await response.json();
 
@@ -94,7 +94,7 @@ export default function Booking() {
       console.log("Payload:", payload);
 
       // Call the local backend API which should execute [dbo].[InsertBooking]
-      const response = await fetch("http://localhost:5000/api/bookings", {
+      const response = await fetch("https://hhhnewapp-1.onrender.com/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

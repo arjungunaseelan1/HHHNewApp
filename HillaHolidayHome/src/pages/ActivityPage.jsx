@@ -57,7 +57,7 @@ function ActivityPage() {
     useEffect(() => {
         const fetchCustomerData = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/customers");
+                const response = await fetch("https://hhhnewapp-1.onrender.com/api/customers");
                 if (response.ok) {
                     const data = await response.json();
                     const latestCustomer = (Array.isArray(data) && data.length > 0)
