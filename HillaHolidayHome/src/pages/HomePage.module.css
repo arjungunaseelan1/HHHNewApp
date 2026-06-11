@@ -112,3 +112,28 @@
     transform: scale(0.98);
 }
 
+@media (max-width: 768px) {
+    .property-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .property-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .calendar-container {
+        margin: 10px 0;
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .calendar-day {
+        padding: 6px;
+        font-size: 14px;
+    }
+}

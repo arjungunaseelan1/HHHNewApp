@@ -125,3 +125,15 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
 }
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+    }
+    .actions {
+        flex-direction: column;
+    }
+    .backBtn, .saveBtn {
+        width: 100%;
+    }
+}

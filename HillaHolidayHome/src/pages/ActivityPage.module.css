@@ -68,3 +68,23 @@
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+@media (max-width: 1024px) {
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .activity-layout {
+        flex-direction: column;
+    }
+    
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-box {
+        margin-top: 20px;
+    }
+}

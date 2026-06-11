@@ -61,3 +61,19 @@
 .span-two {
     grid-column: span 2;
 }
+
+@media (max-width: 768px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width, .span-two {
+        grid-column: span 1;
+    }
+    .button-container {
+        flex-direction: column;
+    }
+    .CancelProfile, .SaveProfile {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

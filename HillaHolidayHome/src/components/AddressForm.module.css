@@ -55,3 +55,12 @@
     border: var(--glass-border);
     box-shadow: var(--glass-shadow);
 }
+
+@media (max-width: 768px) {
+    .address-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+}

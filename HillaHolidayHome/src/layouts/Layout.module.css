@@ -15,3 +15,13 @@
     position: relative;
     z-index: 1;
 }
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+    .main-content {
+        padding: 15px;
+        padding-bottom: 80px;
+    }
+}

@@ -31,3 +31,8 @@
     gap: 8px;
 }
 
+@media (max-width: 768px) {
+    .activity-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
