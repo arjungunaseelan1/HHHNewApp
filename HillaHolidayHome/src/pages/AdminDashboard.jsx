@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AdminDashboard.module.css";
 import { useNavigate } from "react-router-dom";
 import StatsCard from "../components/StatsCard";
@@ -9,6 +9,11 @@ import CalendarComponent from "../components/CalendarComponent";
 function AdminDashboard() {
 
     const navigate = useNavigate();
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const handleLogout = () => {
+        navigate("/");
+    };
 
     const data = [
         { name: "Jan", 2020: 40, 2021: 80, 2022: 60 },
@@ -30,7 +35,42 @@ function AdminDashboard() {
                     >
                         🔔
                     </span>
-                    <span style={{ cursor: 'pointer', margin: '0 10px' }}>👤</span>
+                    <div style={{ position: 'relative', display: 'inline-block' }}>
+                        <span 
+                            style={{ cursor: 'pointer', margin: '0 10px' }}
+                            onClick={() => setShowDropdown(!showDropdown)}
+                        >
+                            👤
+                        </span>
+                        {showDropdown && (
+                            <div style={{ 
+                                position: 'absolute', 
+                                right: 0, 
+                                top: '30px', 
+                                background: 'white', 
+                                border: '1px solid #ccc',
+                                borderRadius: '8px', 
+                                padding: '10px',
+                                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                                zIndex: 10
+                            }}>
+                                <button 
+                                    onClick={handleLogout}
+                                    style={{
+                                        background: 'transparent',
+                                        border: 'none',
+                                        color: '#e74c3c',
+                                        cursor: 'pointer',
+                                        fontWeight: 'bold',
+                                        width: '100%',
+                                        padding: '5px 10px'
+                                    }}
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
