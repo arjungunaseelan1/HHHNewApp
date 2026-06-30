@@ -6,8 +6,6 @@ const { sql, poolPromise } = require("../config/db");
 exports.signup = async (req, res) => {
     try {
 
-        const pool = await poolPromise;
-
         console.log("Pool acquired");
         const { user_name, Email, password } = req.body;
 
