@@ -5,6 +5,10 @@ const { sql, poolPromise } = require("../config/db");
 // 🔐 SIGNUP
 exports.signup = async (req, res) => {
     try {
+
+        const pool = await poolPromise;
+
+        console.log("Pool acquired");
         const { user_name, Email, password } = req.body;
 
         if (!user_name || !Email || !password) {
